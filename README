@@ -1,0 +1,60 @@
+==============================================================================
+
+SALCIE IOAN-CRISTIAN 323CD
+
+==============================================================================
+
+Etapa 1:
+
+Folosire Double Dispatch:
+
+- intre abilitati si eroi: ii se va aplica abilitatii modificatorul
+corespunzator eroului ce ii va fi aplicat.
+
+- intre abilitati si terenuri: ii se va aplica abilitatii modificatorul
+corespunzator terenului pe care va fi folosita.
+
+- o posibila implementare in cazul in care era necesar ca fiecare erou in
+parte sa se miste intr-un anumit fel (o alta animatie, etc.) este de a avea
+un double dispatch similar cu cel dintre abilitate - teren in felul
+erou - miscare.
+
+Dupa cum se poate observa si din commit-urile dupa gitHub, double dispatch
+poate fi aplicat in ambele sensuri, intrucat la un moment dat eu mi-am
+inversat unul dintre ele, pentru a putea avea o simetrie cu celalalt
+(aproximativ aceeasi ordine de folosire la apelare).
+
+==============================================================================
+
+Etapa 2:
+
+Visitor pattern (Double Dispatch):
+
+- intre eroi si ingeri, eroii fiind cei ce pot fi vizitati si ingerii fiind
+vizitatorii.
+
+Strategy pattern:
+
+- nu avem strategiile ca fiind singleton pentru ca mi-ar placea pe viitor sa
+am posibilitatea sa le extind.
+
+- pentru fracti de genul 1 / 3, 1 / 4, am folosit cate 2 constante int pentru
+corectitudine, intrucat (1 / 3) * hp pentru un calculator poate fi diferit de
+(1 * hp) / 3.
+
+Observer pattern:
+
+- observatorii i-am numit admini, avand posibilitatea de a fii creati mai
+multi intrucat am folosit List<Admin> in care momentan este adaugat doar
+TheGreatMagician.
+
+- subiectii sunt eroii si ingerii.
+
+==============================================================================
+
+Feedback:
+
+M-a atras foarte mult tema aceasta, pierdand notiunea timpului atunci cand
+lucram.
+
+==============================================================================
